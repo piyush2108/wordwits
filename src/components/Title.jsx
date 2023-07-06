@@ -20,7 +20,7 @@ const Title = () => {
 
       <div>
         <Link to="play">
-          <button className="p-2 font-primary text-lg text-shadeWhite bg-shadeBlue hover:bg-shadeAccent">
+          <button className="p-2 font-primary text-sm sm:text-lg text-shadeWhite bg-shadeBlue hover:bg-shadeAccent">
             PLAY
           </button>
         </Link>

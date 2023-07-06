@@ -60,6 +60,18 @@ const ResultDisplay = () => {
             })}
           </div>
         </div>
+
+        <div className="font-word text-sm sm:text-lg">
+          Accuracy:
+          <span className="font-bold">
+            {" " +
+              (
+                (word.validLetters.length / word.guessedLetters.length) *
+                100
+              ).toFixed(2)}
+            %
+          </span>
+        </div>
       </div>
 
       <button

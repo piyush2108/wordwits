@@ -21,14 +21,15 @@ const Footer = () => {
         <p className="p-2 font-bold font-primary text-lg sm:text-2xl text-center">
           Connect
         </p>
+
         <ul className="p-2">
-          <li className="p-2 font-word text-sm sm:text-lg text-center text-shadeGray">
+          <li className="p-2 font-word text-sm sm:text-lg text-center text-shadeGray hover:text-shadeWhite">
             <a target="_blank" href="https://github.com/piyush2108">
               <FontAwesomeIcon className="mr-2" icon={faLink} />
               Github
             </a>
           </li>
-          <li className="p-2 font-word text-sm sm:text-lg text-center text-shadeGray">
+          <li className="p-2 font-word text-sm sm:text-lg text-center text-shadeGray hover:text-shadeWhite">
             <a
               target="_blank"
               href="https://www.linkedin.com/in/piyush-sharma01/"

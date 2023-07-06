@@ -6,14 +6,14 @@ import {
 
 const WordShimmer = () => {
   return (
-    <div className="p-2">
+    <div>
       <div className="p-2 flex justify-between">
         <p className="font-secondary">
           <FontAwesomeIcon
             className="mr-2 text-shadeAccent"
             icon={faLightbulb}
           />
-          Hint
+          Info
         </p>
 
         <h1 className="font-secondary">

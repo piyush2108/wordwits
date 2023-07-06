@@ -7,11 +7,12 @@ import { updateLives } from "../utils/store/slices/hangmanSlice";
 
 const KeyboardLayout = () => {
   const dispatch = useDispatch();
+  const wordToGuess = useSelector((store) => store.word.wordToGuess);
   const wordToGuessArray = useSelector((store) => store.word.wordToGuessArray);
 
   const handleKeyPress = (e, key) => {
     e.target.disabled = true;
-    e.target.className = e.target.className + " bg-shadeDisable shadow-sm";
+    e.target.className = e.target.className + " bg-shadeDisable shadow-none";
 
     dispatch(addPressedKey(key));
     if (!wordToGuessArray.includes(key)) {
@@ -25,8 +26,9 @@ const KeyboardLayout = () => {
         {KEYS.map((key, index) => {
           return (
             <button
-              className="m-1 sm:m-2 py-1 sm:py-2 px-2 sm:px-4 font-keys sm:text-lg shadow-lg rounded-md hover:bg-shadeDark hover:text-shadeWhite hover:shadow-sm"
+              className="m-1 sm:m-2 py-1 sm:py-2 px-2 sm:px-4 font-keys sm:text-lg shadow-lg rounded-md hover:bg-shadeDark hover:text-shadeWhite hover:shadow-sm box-shadow"
               key={index}
+              disabled={wordToGuess === "" ? true : false}
               onClick={(e) => {
                 handleKeyPress(e, key);
               }}
@@ -38,7 +40,7 @@ const KeyboardLayout = () => {
       </div>
 
       <button
-        className="mt-2 p-2 font-primary text-lg text-shadeWhite bg-shadeBlue hover:bg-shadeAccent"
+        className="mt-2 p-2 font-primary text-sm sm:text-lg text-shadeWhite bg-shadeBlue hover:bg-shadeAccent"
         onClick={() => window.location.reload(true)}
       >
         RETRY

@@ -48,21 +48,24 @@ const WordWrapper = () => {
   if (wordToGuess === "") return <WordShimmer />;
 
   return (
-    <div className="p-2">
+    <div>
       <div className="p-2 flex justify-between cursor-default">
         <button
           onClick={() => setShowInfo(!showInfo)}
           className="font-secondary"
         >
           <FontAwesomeIcon
-            className="mr-2 text-shadeAccent"
+            className="mr-2 text-shadeAccent hover:text-shadeBlue"
             icon={faLightbulb}
           />
-          Hint
+          Info
         </button>
 
         <h1 className="font-secondary">
-          <FontAwesomeIcon className="mr-2 text-shadeAccent" icon={faHeart} />
+          <FontAwesomeIcon
+            className="mr-2 text-shadeAccent hover:text-shadeBlue"
+            icon={faHeart}
+          />
           {remainingLives}
         </h1>
       </div>
@@ -85,14 +88,14 @@ const WordWrapper = () => {
           return validLetters.includes(word) ? (
             <p
               key={index}
-              className="p-2 font-bold font-word text-xl border-b-[1px] border-black"
+              className="p-2 font-bold font-word text-xl border-b-[2px] border-black"
             >
               {word}
             </p>
           ) : (
             <p
               key={index}
-              className="p-2 font-bold font-word text-xl text-transparent border-b-[1px] border-black"
+              className="p-2 font-bold font-word text-xl text-transparent border-b-[2px] border-black"
             >
               -
             </p>

@@ -9,11 +9,11 @@ const GameScreen = () => {
   const remainingLives = useSelector((store) => store.hangman.remainingLives);
 
   return (
-    <div className="w-full h-fit sm:h-screen py-2 px-4 sm:p-8 flex flex-col justify-center">
+    <div className="w-full h-fit sm:h-screen py-2 px-4 sm:p-8 flex flex-col justify-center ">
       {winStatus || remainingLives === 0 ? (
         <ResultDisplay />
       ) : (
-        <div>
+        <div className="p-2 border-[1px] border-shadeGray">
           <WordWrapper />
           <KeyboardLayout />
         </div>

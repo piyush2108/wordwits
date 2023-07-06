@@ -7,26 +7,28 @@ const SideBanner = () => {
       <div className="p-2">
         <h1 className="font-extrabold font-title text-center sm:text-left text-3xl md:text-5xl lg:text-7xl">
           <span className="text-shadeWhite">Unravel, </span>
-          <span className="text-shadeWhite">Guess, </span>
-          <span className="text-shadeRed">Triumph!</span>
+          <span className="text-shadeRed">Guess, </span>
+          <span className="bg-gradient-to-r from-shadeRed via-shadeWhite to-shadeRed bg-clip-text text-transparent">
+            Triumph!
+          </span>
         </h1>
       </div>
 
       <div className="p-2 flex flex-col justify-center items-center sm:items-start">
-        <h1 className="font-bold font-primary sm:text-lg md:text-xl text-shadeGray">
+        <h1 className="font-primary sm:text-lg md:text-xl text-shadeGray">
           Instructions
         </h1>
 
         <ul className="p-2 text-justify">
-          <li className="py-2 font-primary text-sm text-shadeWhite">
+          <li className="py-2 font-primary text-xs sm:text-sm text-shadeWhite">
             <FontAwesomeIcon className="mr-2 text-sm" icon={faArrowRight} />
             Guess the word, reveal letters, avoid the hangman.
           </li>
-          <li className="py-2 font-primary text-sm text-shadeWhite">
+          <li className="py-2 font-primary text-xs sm:text-sm text-shadeWhite">
             <FontAwesomeIcon className="mr-2 text-sm" icon={faArrowRight} />
             Guess one letter at a time to uncover the word.
           </li>
-          <li className="py-2 font-primary text-sm text-shadeWhite">
+          <li className="py-2 font-primary text-xs sm:text-sm text-shadeWhite">
             <FontAwesomeIcon className="mr-2 text-sm" icon={faArrowRight} />
             Win by guessing the word, lose if the hangman is complete.
           </li>
