@@ -1,8 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLightbulb,
-  faHandHoldingHeart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const WordShimmer = () => {
   return (
@@ -17,11 +14,7 @@ const WordShimmer = () => {
         </p>
 
         <h1 className="font-secondary">
-          <FontAwesomeIcon
-            className="mr-2 text-shadeAccent"
-            icon={faHandHoldingHeart}
-          />
-          6
+          <FontAwesomeIcon className="mr-2 text-shadeAccent" icon={faHeart} />6
         </h1>
       </div>
 
